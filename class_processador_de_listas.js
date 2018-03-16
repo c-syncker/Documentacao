@@ -19,5 +19,5 @@ var class_processador_de_listas =
     [ "revertaLista", "class_processador_de_listas.html#a2fb8260d0e8d319b708bc54f59f41a3e", null ],
     [ "revertaLista", "class_processador_de_listas.html#a3b143ac40f9145a3b2117f1ffc5f4525", null ],
     [ "sincronizeListasNumericas", "class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73", null ],
-    [ "uneListasDeDuracoes", "class_processador_de_listas.html#aaaec45c66a37e9976416b4b298e58aff", null ]
+    [ "unaDeTabuadasOrdenadasSemRepeticoes", "class_processador_de_listas.html#a44af838a94fe60190ebcc8ac91f7d745", null ]
 ];
