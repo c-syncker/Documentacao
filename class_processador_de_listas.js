@@ -6,7 +6,7 @@ var class_processador_de_listas =
     [ "associeAlturasEduracoes", "class_processador_de_listas.html#a55820e47d04ab38190bdaf968a466398", null ],
     [ "calculeDerivadaDiscreta", "class_processador_de_listas.html#a5f32d34c750af53d0e0db52f7cf1c147", null ],
     [ "calculeDerivadaDiscreta", "class_processador_de_listas.html#a0db55a7cbc691d278c0d04aa30467298", null ],
-    [ "calculeMMC", "class_processador_de_listas.html#a8649d6fdaee088023094b93a74c602ac", null ],
+    [ "calculeMMC", "class_processador_de_listas.html#a54ea4b73726fb3f1ee461e644b0f127e", null ],
     [ "coeficienteDeRepeticoes", "class_processador_de_listas.html#abc7452bd3ee8819e996fb83c59173bf2", null ],
     [ "desdobreListas", "class_processador_de_listas.html#a973e3fa18e8101ad289db6d970f9333c", null ],
     [ "desdobreListas", "class_processador_de_listas.html#ac550e42d5f4232324beb9e72accdd8fd", null ],

@@ -1,5 +1,5 @@
 <map id="ProcessadorDeListas::mmc" name="ProcessadorDeListas::mmc">
-<area shape="rect" id="node2" href="$class_processador_de_listas.html#a8649d6fdaee088023094b93a74c602ac" title="Calcula o Mínimo Múltiplo Comum (MMC) com mais de dois elementos. " alt="" coords="257,5,404,47"/>
+<area shape="rect" id="node2" href="$class_processador_de_listas.html#a54ea4b73726fb3f1ee461e644b0f127e" title="Calcula o Mínimo Múltiplo Comum (MMC) com mais de dois elementos. " alt="" coords="257,5,404,47"/>
 <area shape="rect" id="node3" href="$class_processador_de_listas.html#a55820e47d04ab38190bdaf968a466398" title="Faz associação um a um entre alturas e durações. " alt="" coords="241,71,420,112"/>
 <area shape="rect" id="node5" href="$class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="237,136,424,177"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="472,111,523,138"/>
