@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_gerenciador_de_memorias.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -73,9 +97,20 @@ $(function() {
  <a href="class_gerenciador_de_memorias.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_gerenciador_de_memorias_8h_source.html">GerenciadorDeMemorias.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for GerenciadorDeMemorias:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias__coll__graph.png" border="0" usemap="#_gerenciador_de_memorias_coll__map" alt="Collaboration graph"/></div>
+<map name="_gerenciador_de_memorias_coll__map" id="_gerenciador_de_memorias_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2dab654a3fb0dad52a4929f99afb3ee7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a2dab654a3fb0dad52a4929f99afb3ee7">GerenciadorDeMemorias</a> ()</td></tr>
+<tr class="separator:a2dab654a3fb0dad52a4929f99afb3ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dec18d11da677ddeb713dd2d8c6bd2f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a7dec18d11da677ddeb713dd2d8c6bd2f">~GerenciadorDeMemorias</a> ()</td></tr>
+<tr class="separator:a7dec18d11da677ddeb713dd2d8c6bd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80af232df523f04f16cd7a7318f6c9c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a80af232df523f04f16cd7a7318f6c9c7">adicioneListaNaMemoria</a> (list&lt; int &gt; &amp;listaParaAdicionarNaMemoria)</td></tr>
 <tr class="memdesc:a80af232df523f04f16cd7a7318f6c9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recebe uma lista de durações em inteiros e as adiciona na memória.  <a href="#a80af232df523f04f16cd7a7318f6c9c7">More...</a><br /></td></tr>
 <tr class="separator:a80af232df523f04f16cd7a7318f6c9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -88,8 +123,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a45757df4d2c6e9d59bc3088f7cd2c1ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a45757df4d2c6e9d59bc3088f7cd2c1ce">deleteDaMemoria</a> (int idDaListaParaDeletar)</td></tr>
 <tr class="memdesc:a45757df4d2c6e9d59bc3088f7cd2c1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove uma lista da memória.  <a href="#a45757df4d2c6e9d59bc3088f7cd2c1ce">More...</a><br /></td></tr>
 <tr class="separator:a45757df4d2c6e9d59bc3088f7cd2c1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d3cfcc42ddd63b0f34eb77282e7438f"><td class="memItemLeft" align="right" valign="top"><a id="a7d3cfcc42ddd63b0f34eb77282e7438f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desfazer</b> ()</td></tr>
+<tr class="memitem:a7d3cfcc42ddd63b0f34eb77282e7438f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a7d3cfcc42ddd63b0f34eb77282e7438f">desfazer</a> ()</td></tr>
 <tr class="separator:a7d3cfcc42ddd63b0f34eb77282e7438f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5b2e528aad843eed58fc65e7c4fc4a2"><td class="memItemLeft" align="right" valign="top">list&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#ae5b2e528aad843eed58fc65e7c4fc4a2">pegueListaNumericaDaMemoria</a> (int idDaLista)</td></tr>
 <tr class="memdesc:ae5b2e528aad843eed58fc65e7c4fc4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma lista numérica armazenada na memória.  <a href="#ae5b2e528aad843eed58fc65e7c4fc4a2">More...</a><br /></td></tr>
@@ -103,17 +137,58 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>desfazer</b> ()</td><
 <tr class="memitem:a7d330b897726fe95d0e95460e8f34f2c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a7d330b897726fe95d0e95460e8f34f2c">pegueUltimoIdValido</a> ()</td></tr>
 <tr class="memdesc:a7d330b897726fe95d0e95460e8f34f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o último id válido da memória.  <a href="#a7d330b897726fe95d0e95460e8f34f2c">More...</a><br /></td></tr>
 <tr class="separator:a7d330b897726fe95d0e95460e8f34f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a358f5f3441bae8891f6613ac358ffcf8"><td class="memItemLeft" align="right" valign="top"><a id="a358f5f3441bae8891f6613ac358ffcf8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>escrevaParaArquivo</b> (ofstream &amp;arquivoDeSaida)</td></tr>
+<tr class="memitem:a358f5f3441bae8891f6613ac358ffcf8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a358f5f3441bae8891f6613ac358ffcf8">escrevaParaArquivo</a> (ofstream &amp;arquivoDeSaida)</td></tr>
 <tr class="separator:a358f5f3441bae8891f6613ac358ffcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ed6fc1db15d3cee22b08a894dc43d71"><td class="memItemLeft" align="right" valign="top"><a id="a0ed6fc1db15d3cee22b08a894dc43d71"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (ifstream &amp;arquivoDeEntrada)</td></tr>
+<tr class="memitem:a0ed6fc1db15d3cee22b08a894dc43d71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gerenciador_de_memorias.html#a0ed6fc1db15d3cee22b08a894dc43d71">leiaDoArquivo</a> (ifstream &amp;arquivoDeEntrada)</td></tr>
 <tr class="separator:a0ed6fc1db15d3cee22b08a894dc43d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe responsável por criar e salvar listas informadas pelo usuário. </p>
 <p>Essa classe é usada para registrar as listas informadas pelo usuário e aquelas que são criadas durante operações que o usuário realiza. Essas listas podem ser recuperadas para serem novamente usadas em operações pelo usuário. Essa classe também realiza o salvamento em arquivo das listas que estão na memória. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2dab654a3fb0dad52a4929f99afb3ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dab654a3fb0dad52a4929f99afb3ee7">&#9670;&nbsp;</a></span>GerenciadorDeMemorias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GerenciadorDeMemorias::GerenciadorDeMemorias </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dec18d11da677ddeb713dd2d8c6bd2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dec18d11da677ddeb713dd2d8c6bd2f">&#9670;&nbsp;</a></span>~GerenciadorDeMemorias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GerenciadorDeMemorias::~GerenciadorDeMemorias </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a80af232df523f04f16cd7a7318f6c9c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80af232df523f04f16cd7a7318f6c9c7">&#9670;&nbsp;</a></span>adicioneListaNaMemoria() <span class="overload">[1/2]</span></h2>
 
@@ -138,6 +213,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (if
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a80af232df523f04f16cd7a7318f6c9c7_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a80af232df523f04f16cd7a7318f6c9c7_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a80af232df523f04f16cd7a7318f6c9c7_icgraph" id="class_gerenciador_de_memorias_a80af232df523f04f16cd7a7318f6c9c7_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="227,13,277,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -192,6 +275,101 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (if
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_cgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_cgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_cgraph" id="class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_cgraph">
+<area shape="rect" id="node2" href="class_gerenciador_de_memorias.html#a411d6bdaa5761f1bfff3034e13622ee9" title="Verifica se uma lista está na memória. " alt="" coords="220,5,447,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_icgraph" id="class_gerenciador_de_memorias_a45757df4d2c6e9d59bc3088f7cd2c1ce_icgraph">
+<area shape="rect" id="node2" href="class_gerenciador_de_memorias.html#a7d3cfcc42ddd63b0f34eb77282e7438f" title="GerenciadorDeMemorias\l::desfazer" alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="435,42,485,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d3cfcc42ddd63b0f34eb77282e7438f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3cfcc42ddd63b0f34eb77282e7438f">&#9670;&nbsp;</a></span>desfazer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GerenciadorDeMemorias::desfazer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_cgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_cgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_cgraph" id="class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_cgraph">
+<area shape="rect" id="node2" href="class_gerenciador_de_memorias.html#a45757df4d2c6e9d59bc3088f7cd2c1ce" title="Remove uma lista da memória. " alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node3" href="class_gerenciador_de_memorias.html#a411d6bdaa5761f1bfff3034e13622ee9" title="Verifica se uma lista está na memória. " alt="" coords="435,5,661,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_icgraph" id="class_gerenciador_de_memorias_a7d3cfcc42ddd63b0f34eb77282e7438f_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="220,13,271,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a358f5f3441bae8891f6613ac358ffcf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358f5f3441bae8891f6613ac358ffcf8">&#9670;&nbsp;</a></span>escrevaParaArquivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GerenciadorDeMemorias::escrevaParaArquivo </td>
+          <td>(</td>
+          <td class="paramtype">ofstream &amp;&#160;</td>
+          <td class="paramname"><em>arquivoDeSaida</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a358f5f3441bae8891f6613ac358ffcf8_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a358f5f3441bae8891f6613ac358ffcf8_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a358f5f3441bae8891f6613ac358ffcf8_icgraph" id="class_gerenciador_de_memorias_a358f5f3441bae8891f6613ac358ffcf8_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="220,13,271,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ed6fc1db15d3cee22b08a894dc43d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed6fc1db15d3cee22b08a894dc43d71">&#9670;&nbsp;</a></span>leiaDoArquivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GerenciadorDeMemorias::leiaDoArquivo </td>
+          <td>(</td>
+          <td class="paramtype">ifstream &amp;&#160;</td>
+          <td class="paramname"><em>arquivoDeEntrada</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -212,6 +390,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (if
 
 <p>Exibe as listas na memória. </p>
 <p>Exibe para o usuário todas as listas que foram salvas até aquele momento. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_abf89381685340fda5afbe067219f83f3_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_abf89381685340fda5afbe067219f83f3_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_abf89381685340fda5afbe067219f83f3_icgraph" id="class_gerenciador_de_memorias_abf89381685340fda5afbe067219f83f3_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="225,13,276,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -239,6 +425,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (if
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_ae8ab444730cfd79144e10073926fd92b_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_ae8ab444730cfd79144e10073926fd92b_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_ae8ab444730cfd79144e10073926fd92b_icgraph" id="class_gerenciador_de_memorias_ae8ab444730cfd79144e10073926fd92b_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="289,13,340,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -266,6 +460,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (if
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_ae5b2e528aad843eed58fc65e7c4fc4a2_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_ae5b2e528aad843eed58fc65e7c4fc4a2_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_ae5b2e528aad843eed58fc65e7c4fc4a2_icgraph" id="class_gerenciador_de_memorias_ae5b2e528aad843eed58fc65e7c4fc4a2_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="269,13,320,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -286,6 +488,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (if
 
 <p>Retorna o último id válido da memória. </p>
 <p>Retorna um valor que corresponde a última posição válida na memória. Usado para testar se o id informado pelo usuário é válido. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a7d330b897726fe95d0e95460e8f34f2c_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a7d330b897726fe95d0e95460e8f34f2c_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a7d330b897726fe95d0e95460e8f34f2c_icgraph" id="class_gerenciador_de_memorias_a7d330b897726fe95d0e95460e8f34f2c_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a77f97c42b75ec4894aafb02c4ddb7ec5" title="vericaSeIDDaListaEValido" alt="" coords="220,13,397,39"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="445,13,496,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -313,19 +524,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>leiaDoArquivo</b> (if
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gerenciador_de_memorias_a411d6bdaa5761f1bfff3034e13622ee9_icgraph.png" border="0" usemap="#class_gerenciador_de_memorias_a411d6bdaa5761f1bfff3034e13622ee9_icgraph" alt=""/></div>
+<map name="class_gerenciador_de_memorias_a411d6bdaa5761f1bfff3034e13622ee9_icgraph" id="class_gerenciador_de_memorias_a411d6bdaa5761f1bfff3034e13622ee9_icgraph">
+<area shape="rect" id="node2" href="class_gerenciador_de_memorias.html#a45757df4d2c6e9d59bc3088f7cd2c1ce" title="Remove uma lista da memória. " alt="" coords="280,56,447,97"/>
+<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="709,71,760,98"/>
+<area shape="rect" id="node3" href="class_gerenciador_de_memorias.html#a7d3cfcc42ddd63b0f34eb77282e7438f" title="GerenciadorDeMemorias\l::desfazer" alt="" coords="495,5,661,47"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_gerenciador_de_memorias_8h_source.html">GerenciadorDeMemorias.h</a></li>
-<li>src/GerenciadorDeMemorias.cpp</li>
+<li>C-Syncker/include/<a class="el" href="_gerenciador_de_memorias_8h_source.html">GerenciadorDeMemorias.h</a></li>
+<li>C-Syncker/src/<a class="el" href="_gerenciador_de_memorias_8cpp.html">GerenciadorDeMemorias.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_gerenciador_de_memorias.html">GerenciadorDeMemorias</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<map id="ProcessadorDeListas::sincronizeListasNumericas" name="ProcessadorDeListas::sincronizeListasNumericas">
+<area shape="rect" id="node2" href="$class_processador_de_listas.html#a868215a0623d68b702f804615674f07d" title="Calcula o Mínimo Múltiplo Comum (MMC). " alt="" coords="240,5,424,32"/>
+<area shape="rect" id="node3" href="$class_processador_de_listas.html#abc7452bd3ee8819e996fb83c59173bf2" title="ProcessadorDeListas\l::coeficienteDeRepeticoes" alt="" coords="244,57,420,98"/>
+<area shape="rect" id="node4" href="$class_processador_de_listas.html#a973e3fa18e8101ad289db6d970f9333c" title="Desdobra/Repete uma lista. " alt="" coords="259,122,405,163"/>
+<area shape="rect" id="node5" href="$class_processador_de_listas.html#a9c839959d797222e3d7f3fb7beb88896" title="Acumula (soma) os valores de uma lista. " alt="" coords="248,187,416,229"/>
+<area shape="rect" id="node6" href="$class_processador_de_listas.html#af1505b17c1556665a2ecb5247188d4c4" title="Dadas duas listas, realiza uma junção entre elas (semelhante ao append()). " alt="" coords="259,253,405,294"/>
+<area shape="rect" id="node7" href="$class_processador_de_listas.html#ae9e4af0b3ba22ece83efef5924173a1c" title="Dada uma lista contendo repetições de elementos, faz uma remoção desses valores. " alt="" coords="259,318,405,359"/>
+<area shape="rect" id="node8" href="$class_processador_de_listas.html#a0c2160bdd962834db2929a6f8a9acd7a" title="Ordena listas. " alt="" coords="259,383,405,425"/>
+<area shape="rect" id="node9" href="$class_processador_de_listas.html#a5f32d34c750af53d0e0db52f7cf1c147" title="Calcula a derivada discreta (vetor intervalar) de uma lista. " alt="" coords="246,449,418,490"/>
+</map>

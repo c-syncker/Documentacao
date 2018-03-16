@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +54,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions_func.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,6 +107,9 @@ $(function() {
 <li>calculeMMC()
 : <a class="el" href="class_processador_de_listas.html#a8649d6fdaee088023094b93a74c602ac">ProcessadorDeListas</a>
 </li>
+<li>coeficienteDeRepeticoes()
+: <a class="el" href="class_processador_de_listas.html#abc7452bd3ee8819e996fb83c59173bf2">ProcessadorDeListas</a>
+</li>
 <li>convertaAlturasCifradasParaNumeroMIDI()
 : <a class="el" href="class_processador_de_entradas.html#a09e9759de7ceaedcb065c1b0123012a6">ProcessadorDeEntradas</a>
 </li>
@@ -99,12 +126,21 @@ $(function() {
 <li>desdobreListas()
 : <a class="el" href="class_processador_de_listas.html#a973e3fa18e8101ad289db6d970f9333c">ProcessadorDeListas</a>
 </li>
+<li>desfazer()
+: <a class="el" href="class_gerenciador_de_memorias.html#a7d3cfcc42ddd63b0f34eb77282e7438f">GerenciadorDeMemorias</a>
+</li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>escrevaParaArquivo()
+: <a class="el" href="class_gerenciador_de_memorias.html#a358f5f3441bae8891f6613ac358ffcf8">GerenciadorDeMemorias</a>
+</li>
 <li>Escriba()
 : <a class="el" href="class_escriba.html#aa798bd16ea914694eecac435e1e0f068">Escriba</a>
+</li>
+<li>exibaLista()
+: <a class="el" href="class_processador_de_listas.html#afdd9f93e3e2b09e0d8d23c630b501d80">ProcessadorDeListas</a>
 </li>
 </ul>
 
@@ -112,6 +148,9 @@ $(function() {
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>gereArquivoLilypond()
 : <a class="el" href="class_escriba.html#adaadbde20bec61782a7414f36e96aec0">Escriba</a>
+</li>
+<li>GerenciadorDeMemorias()
+: <a class="el" href="class_gerenciador_de_memorias.html#a2dab654a3fb0dad52a4929f99afb3ee7">GerenciadorDeMemorias</a>
 </li>
 </ul>
 
@@ -126,6 +165,13 @@ $(function() {
 <h3><a id="index_j"></a>- j -</h3><ul>
 <li>junteListas()
 : <a class="el" href="class_processador_de_listas.html#af1505b17c1556665a2ecb5247188d4c4">ProcessadorDeListas</a>
+</li>
+</ul>
+
+
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>leiaDoArquivo()
+: <a class="el" href="class_gerenciador_de_memorias.html#a0ed6fc1db15d3cee22b08a894dc43d71">GerenciadorDeMemorias</a>
 </li>
 </ul>
 
@@ -172,12 +218,21 @@ $(function() {
 <li>pegueUltimoIdValido()
 : <a class="el" href="class_gerenciador_de_memorias.html#a7d330b897726fe95d0e95460e8f34f2c">GerenciadorDeMemorias</a>
 </li>
+<li>ProcessadorDeEntradas()
+: <a class="el" href="class_processador_de_entradas.html#ac116ff9fb9cdf9afa24489fa97f9d874">ProcessadorDeEntradas</a>
+</li>
+<li>ProcessadorDeListas()
+: <a class="el" href="class_processador_de_listas.html#a8a6bfe2b6d0397408cf36ec3dccdd264">ProcessadorDeListas</a>
+</li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>removaRepeticoes()
 : <a class="el" href="class_processador_de_listas.html#ae9e4af0b3ba22ece83efef5924173a1c">ProcessadorDeListas</a>
+</li>
+<li>revertaLista()
+: <a class="el" href="class_processador_de_listas.html#a2fb8260d0e8d319b708bc54f59f41a3e">ProcessadorDeListas</a>
 </li>
 </ul>
 
@@ -191,6 +246,9 @@ $(function() {
 </li>
 <li>sincronizeListasNumericas()
 : <a class="el" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73">ProcessadorDeListas</a>
+</li>
+<li>substituiAlturaCoringaDoDicionarioDeDuracoes()
+: <a class="el" href="class_escriba.html#a9d3b881de29eee0831f9997ceaca0cdd">Escriba</a>
 </li>
 <li>substituiAlturaCoringaDoDicionarioDeDuracoesString()
 : <a class="el" href="class_escriba.html#a8b90bd48a8607486a4471d7f287cdc91">Escriba</a>
@@ -212,13 +270,35 @@ $(function() {
 <li>verifiqueSeListaExisteNaMemoria()
 : <a class="el" href="class_gerenciador_de_memorias.html#a411d6bdaa5761f1bfff3034e13622ee9">GerenciadorDeMemorias</a>
 </li>
+<li>verifiqueTipoLista()
+: <a class="el" href="class_processador_de_entradas.html#aefe68fd457391f865341a27cf3f100ed">ProcessadorDeEntradas</a>
+</li>
+</ul>
+
+
+<h3><a id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~Escriba()
+: <a class="el" href="class_escriba.html#ab27ea56c3da17726a6ffe9633b6c0fee">Escriba</a>
+</li>
+<li>~GerenciadorDeMemorias()
+: <a class="el" href="class_gerenciador_de_memorias.html#a7dec18d11da677ddeb713dd2d8c6bd2f">GerenciadorDeMemorias</a>
+</li>
+<li>~ProcessadorDeEntradas()
+: <a class="el" href="class_processador_de_entradas.html#a4bc18656a6fdebce27dd9ddf059f1922">ProcessadorDeEntradas</a>
+</li>
+<li>~ProcessadorDeListas()
+: <a class="el" href="class_processador_de_listas.html#acfb1a7441736a7076d058f10ddd6c853">ProcessadorDeListas</a>
+</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

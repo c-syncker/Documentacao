@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['separealturasdeduracoes',['separeAlturasDeDuracoes',['../class_escriba.html#acbcfa8cc9829b93cc2ba927cd4282e38',1,'Escriba']]],
-  ['separeentradas',['separeEntradas',['../class_processador_de_entradas.html#ae4a10fd2078e4235ff4f7bbdefc8966b',1,'ProcessadorDeEntradas']]],
-  ['sincronizelistasnumericas',['sincronizeListasNumericas',['../class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73',1,'ProcessadorDeListas']]],
-  ['substituialturacoringadodicionariodeduracoesstring',['substituiAlturaCoringaDoDicionarioDeDuracoesString',['../class_escriba.html#a8b90bd48a8607486a4471d7f287cdc91',1,'Escriba']]]
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['removarepeticoes',['removaRepeticoes',['../class_processador_de_listas.html#ae9e4af0b3ba22ece83efef5924173a1c',1,'ProcessadorDeListas']]],
+  ['resetlista',['resetLista',['../main_8cpp.html#a451f3082da798ac883799705083e20ec',1,'resetLista(list&lt; int &gt; &amp;entrada):&#160;main.cpp'],['../main_8cpp.html#a65e581714f5a012335fa77b3661a6430',1,'resetLista(list&lt; string &gt; &amp;entrada):&#160;main.cpp']]],
+  ['revertalista',['revertaLista',['../class_processador_de_listas.html#a2fb8260d0e8d319b708bc54f59f41a3e',1,'ProcessadorDeListas::revertaLista(list&lt; int &gt; &amp;listaOrdemNormal, list&lt; int &gt; &amp;listaOrdemInversa)'],['../class_processador_de_listas.html#a3b143ac40f9145a3b2117f1ffc5f4525',1,'ProcessadorDeListas::revertaLista(list&lt; string &gt; &amp;listaOrdemNormal, list&lt; string &gt; &amp;listaOrdemInversa)']]]
 ];

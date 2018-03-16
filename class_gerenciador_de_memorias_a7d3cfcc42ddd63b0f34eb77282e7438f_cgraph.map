@@ -1,0 +1,4 @@
+<map id="GerenciadorDeMemorias::desfazer" name="GerenciadorDeMemorias::desfazer">
+<area shape="rect" id="node2" href="$class_gerenciador_de_memorias.html#a45757df4d2c6e9d59bc3088f7cd2c1ce" title="Remove uma lista da memória. " alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node3" href="$class_gerenciador_de_memorias.html#a411d6bdaa5761f1bfff3034e13622ee9" title="Verifica se uma lista está na memória. " alt="" coords="435,5,661,47"/>
+</map>

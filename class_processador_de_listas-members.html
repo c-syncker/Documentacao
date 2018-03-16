@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_processador_de_listas.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">ProcessadorDeListas Member List</div>  </div>
@@ -73,27 +97,30 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#a5f32d34c750af53d0e0db52f7cf1c147">calculeDerivadaDiscreta</a>(list&lt; int &gt; &amp;listaParaDerivar, list&lt; int &gt; &amp;listaDerivada)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#a0db55a7cbc691d278c0d04aa30467298">calculeDerivadaDiscreta</a>(map&lt; int, int &gt; &amp;uniaoDeTabuadasOrdenadasSemRepeticoes, list&lt; int &gt; &amp;listaDerivadaDiscreta)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#a8649d6fdaee088023094b93a74c602ac">calculeMMC</a>(list&lt; int &gt; &amp;listaDeValores, list&lt; int &gt; &amp;inteirosParaSincronizacao)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>coeficienteDeRepeticoes</b>(int MMClistasEnvolvidas, int somatorioElementosLista) (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#abc7452bd3ee8819e996fb83c59173bf2">coeficienteDeRepeticoes</a>(int MMClistasEnvolvidas, int somatorioElementosLista)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#a973e3fa18e8101ad289db6d970f9333c">desdobreListas</a>(list&lt; int &gt; &amp;listaParaDesdobrar, int numeroDeRepeticoes, list&lt; int &gt; &amp;listaResultante)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>desdobreListas</b>(list&lt; string &gt; &amp;listaParaDesdobrar, int numeroDeRepeticoes, list&lt; string &gt; &amp;listaResultante) (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>exibaLista</b>(list&lt; string &gt; listaParaExibir) (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>exibaLista</b>(list&lt; int &gt; listaParaExibir) (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#ac550e42d5f4232324beb9e72accdd8fd">desdobreListas</a>(list&lt; string &gt; &amp;listaParaDesdobrar, int numeroDeRepeticoes, list&lt; string &gt; &amp;listaResultante)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#afdd9f93e3e2b09e0d8d23c630b501d80">exibaLista</a>(list&lt; string &gt; listaParaExibir)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#a8092d89027d274b578c060cff555473d">exibaLista</a>(list&lt; int &gt; listaParaExibir)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#af1505b17c1556665a2ecb5247188d4c4">junteListas</a>(list&lt; int &gt; &amp;lista1, list&lt; int &gt; &amp;lista2, list&lt; int &gt; &amp;listaJuntada)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#a868215a0623d68b702f804615674f07d">mmc</a>(int num1, int num2)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#a0c2160bdd962834db2929a6f8a9acd7a">ordeneLista</a>(list&lt; int &gt; &amp;listaNaoOrdenada)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ProcessadorDeListas</b>() (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#a8a6bfe2b6d0397408cf36ec3dccdd264">ProcessadorDeListas</a>()</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#ae9e4af0b3ba22ece83efef5924173a1c">removaRepeticoes</a>(list&lt; int &gt; &amp;listaComRepeticoes, list&lt; int &gt; &amp;listaSemRepeticoes)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>revertaLista</b>(list&lt; int &gt; &amp;listaOrdemNormal, list&lt; int &gt; &amp;listaOrdemInversa) (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>revertaLista</b>(list&lt; string &gt; &amp;listaOrdemNormal, list&lt; string &gt; &amp;listaOrdemInversa) (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#a2fb8260d0e8d319b708bc54f59f41a3e">revertaLista</a>(list&lt; int &gt; &amp;listaOrdemNormal, list&lt; int &gt; &amp;listaOrdemInversa)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#a3b143ac40f9145a3b2117f1ffc5f4525">revertaLista</a>(list&lt; string &gt; &amp;listaOrdemNormal, list&lt; string &gt; &amp;listaOrdemInversa)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73">sincronizeListasNumericas</a>(list&lt; int &gt; &amp;lista1, list&lt; int &gt; &amp;lista2, list&lt; int &gt; &amp;listaResultante)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_processador_de_listas.html#aaaec45c66a37e9976416b4b298e58aff">uneListasDeDuracoes</a>(list&lt; int &gt; &amp;inteirosParaSincronizacao, int resultadoMMC, map&lt; int, int &gt; &amp;uniaoDeTabuadasOrdenadasSemRepeticoes)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~ProcessadorDeListas</b>() (defined in <a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a>)</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_processador_de_listas.html#acfb1a7441736a7076d058f10ddd6c853">~ProcessadorDeListas</a>()</td><td class="entry"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

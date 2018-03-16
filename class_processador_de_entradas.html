@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_processador_de_entradas.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -73,18 +97,28 @@ $(function() {
  <a href="class_processador_de_entradas.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_processador_de_entradas_8h_source.html">ProcessadorDeEntradas.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ProcessadorDeEntradas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_entradas__coll__graph.png" border="0" usemap="#_processador_de_entradas_coll__map" alt="Collaboration graph"/></div>
+<map name="_processador_de_entradas_coll__map" id="_processador_de_entradas_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ac116ff9fb9cdf9afa24489fa97f9d874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#ac116ff9fb9cdf9afa24489fa97f9d874">ProcessadorDeEntradas</a> ()</td></tr>
+<tr class="separator:ac116ff9fb9cdf9afa24489fa97f9d874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc18656a6fdebce27dd9ddf059f1922"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#a4bc18656a6fdebce27dd9ddf059f1922">~ProcessadorDeEntradas</a> ()</td></tr>
+<tr class="separator:a4bc18656a6fdebce27dd9ddf059f1922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e9759de7ceaedcb065c1b0123012a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#a09e9759de7ceaedcb065c1b0123012a6">convertaAlturasCifradasParaNumeroMIDI</a> (list&lt; string &gt; &amp;entradas)</td></tr>
 <tr class="memdesc:a09e9759de7ceaedcb065c1b0123012a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recebe uma lista de alturas em cifras e as converte em seus equivalentes numéricos.  <a href="#a09e9759de7ceaedcb065c1b0123012a6">More...</a><br /></td></tr>
 <tr class="separator:a09e9759de7ceaedcb065c1b0123012a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4336d0eae71a1a4d5100444e79b5a7df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#a4336d0eae71a1a4d5100444e79b5a7df">convertaNumeroMIDIParaAlturasCifradas</a> (list&lt; int &gt; &amp;entradasInteiro, list&lt; string &gt; &amp;saidaString)</td></tr>
 <tr class="memdesc:a4336d0eae71a1a4d5100444e79b5a7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recebe uma lista com valores inteiros e os converte em seus equivalentes alfanuméricos.  <a href="#a4336d0eae71a1a4d5100444e79b5a7df">More...</a><br /></td></tr>
 <tr class="separator:a4336d0eae71a1a4d5100444e79b5a7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af70849d24dc0a004f5680661ad530f5e"><td class="memItemLeft" align="right" valign="top"><a id="af70849d24dc0a004f5680661ad530f5e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#af70849d24dc0a004f5680661ad530f5e">verifiqueEntrada</a> (string listaDeEntrada, int opcaoDeEntrada)</td></tr>
-<tr class="memdesc:af70849d24dc0a004f5680661ad530f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Não mais usado no código atual. <br /></td></tr>
+<tr class="memitem:af70849d24dc0a004f5680661ad530f5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#af70849d24dc0a004f5680661ad530f5e">verifiqueEntrada</a> (string listaDeEntrada, int opcaoDeEntrada)</td></tr>
+<tr class="memdesc:af70849d24dc0a004f5680661ad530f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Não mais usado no código atual.  <a href="#af70849d24dc0a004f5680661ad530f5e">More...</a><br /></td></tr>
 <tr class="separator:af70849d24dc0a004f5680661ad530f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4a10fd2078e4235ff4f7bbdefc8966b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#ae4a10fd2078e4235ff4f7bbdefc8966b">separeEntradas</a> (string entrada)</td></tr>
 <tr class="memdesc:ae4a10fd2078e4235ff4f7bbdefc8966b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recebe uma entrada no formato string com valores de alturas ou durações e as separa em listas.  <a href="#ae4a10fd2078e4235ff4f7bbdefc8966b">More...</a><br /></td></tr>
@@ -98,11 +132,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a05af11a333be752ca36e208bb836fa5f"><td class="memItemLeft" align="right" valign="top">list&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#a05af11a333be752ca36e208bb836fa5f">pegueAlturasCifradas</a> ()</td></tr>
 <tr class="memdesc:a05af11a333be752ca36e208bb836fa5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma lista com as alturas no formato de cifras.  <a href="#a05af11a333be752ca36e208bb836fa5f">More...</a><br /></td></tr>
 <tr class="separator:a05af11a333be752ca36e208bb836fa5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefe68fd457391f865341a27cf3f100ed"><td class="memItemLeft" align="right" valign="top"><a id="aefe68fd457391f865341a27cf3f100ed"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b> (list&lt; int &gt; listaDeEntrada)</td></tr>
+<tr class="memitem:aefe68fd457391f865341a27cf3f100ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#aefe68fd457391f865341a27cf3f100ed">verifiqueTipoLista</a> (list&lt; int &gt; listaDeEntrada)</td></tr>
 <tr class="separator:aefe68fd457391f865341a27cf3f100ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0bd217307463a3cea9a3ba54693a0e4"><td class="memItemLeft" align="right" valign="top"><a id="aa0bd217307463a3cea9a3ba54693a0e4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b> (list&lt; string &gt; listaDeEntrada)</td></tr>
+<tr class="memitem:aa0bd217307463a3cea9a3ba54693a0e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#aa0bd217307463a3cea9a3ba54693a0e4">verifiqueTipoLista</a> (list&lt; string &gt; listaDeEntrada)</td></tr>
 <tr class="separator:aa0bd217307463a3cea9a3ba54693a0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a040b433b385a9780e6a17ec5de5f5f5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_entradas.html#a040b433b385a9780e6a17ec5de5f5f5c">mostreValorMIDIDasAlturas</a> (string altura)</td></tr>
 <tr class="memdesc:a040b433b385a9780e6a17ec5de5f5f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna um número MIDI correspondente a uma altura cifrada.  <a href="#a040b433b385a9780e6a17ec5de5f5f5c">More...</a><br /></td></tr>
@@ -111,7 +143,50 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe responsável por tratar as entradas do usuário. </p>
 <p>Essa classe recebe listas numéricas e/ou alfanuméricas do usuário. Faz o tratamento necessário sobre essa entrada extraindo listas de alturas e durações a partir dos valores informados. Essas listas podem ser passadas para outras classes que realizam operações sobre listas. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac116ff9fb9cdf9afa24489fa97f9d874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac116ff9fb9cdf9afa24489fa97f9d874">&#9670;&nbsp;</a></span>ProcessadorDeEntradas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProcessadorDeEntradas::ProcessadorDeEntradas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bc18656a6fdebce27dd9ddf059f1922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc18656a6fdebce27dd9ddf059f1922">&#9670;&nbsp;</a></span>~ProcessadorDeEntradas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProcessadorDeEntradas::~ProcessadorDeEntradas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a09e9759de7ceaedcb065c1b0123012a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09e9759de7ceaedcb065c1b0123012a6">&#9670;&nbsp;</a></span>convertaAlturasCifradasParaNumeroMIDI()</h2>
 
@@ -136,6 +211,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_entradas_a09e9759de7ceaedcb065c1b0123012a6_icgraph.png" border="0" usemap="#class_processador_de_entradas_a09e9759de7ceaedcb065c1b0123012a6_icgraph" alt=""/></div>
+<map name="class_processador_de_entradas_a09e9759de7ceaedcb065c1b0123012a6_icgraph" id="class_processador_de_entradas_a09e9759de7ceaedcb065c1b0123012a6_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="307,5,358,32"/>
+<area shape="rect" id="node3" href="class_processador_de_entradas.html#af70849d24dc0a004f5680661ad530f5e" title="Não mais usado no código atual. " alt="" coords="251,57,415,98"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -221,6 +305,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b>
 
 <p>Retorna uma lista com as alturas no formato de cifras. </p>
 <p>Retorna uma lista das alturas cifradas que foram passadas pelo usuário. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_entradas_a05af11a333be752ca36e208bb836fa5f_icgraph.png" border="0" usemap="#class_processador_de_entradas_a05af11a333be752ca36e208bb836fa5f_icgraph" alt=""/></div>
+<map name="class_processador_de_entradas_a05af11a333be752ca36e208bb836fa5f_icgraph" id="class_processador_de_entradas_a05af11a333be752ca36e208bb836fa5f_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="217,13,268,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -241,6 +333,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b>
 
 <p>Retorna uma lista com as alturas convertidas em números MIDI. </p>
 <p>Retorna uma lista de inteiros com os valores correspondentes em MIDI das alturas cifradas informadas pelo usuário. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_entradas_a41fe309cc0590a13cf6a28bdb3ccd0e1_icgraph.png" border="0" usemap="#class_processador_de_entradas_a41fe309cc0590a13cf6a28bdb3ccd0e1_icgraph" alt=""/></div>
+<map name="class_processador_de_entradas_a41fe309cc0590a13cf6a28bdb3ccd0e1_icgraph" id="class_processador_de_entradas_a41fe309cc0590a13cf6a28bdb3ccd0e1_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="235,13,285,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -261,6 +361,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b>
 
 <p>Retorna uma lista com as durações informadas pelo usuário. </p>
 <p>Retorna uma lista de inteiros com os valores das durações que foram passadas pelo usuário na entrada. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_entradas_ac689d2c34ec740d5f471747b6236adca_icgraph.png" border="0" usemap="#class_processador_de_entradas_ac689d2c34ec740d5f471747b6236adca_icgraph" alt=""/></div>
+<map name="class_processador_de_entradas_ac689d2c34ec740d5f471747b6236adca_icgraph" id="class_processador_de_entradas_ac689d2c34ec740d5f471747b6236adca_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="217,13,268,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -288,19 +396,105 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifiqueTipoLista</b>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_entradas_ae4a10fd2078e4235ff4f7bbdefc8966b_icgraph.png" border="0" usemap="#class_processador_de_entradas_ae4a10fd2078e4235ff4f7bbdefc8966b_icgraph" alt=""/></div>
+<map name="class_processador_de_entradas_ae4a10fd2078e4235ff4f7bbdefc8966b_icgraph" id="class_processador_de_entradas_ae4a10fd2078e4235ff4f7bbdefc8966b_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="217,13,268,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af70849d24dc0a004f5680661ad530f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70849d24dc0a004f5680661ad530f5e">&#9670;&nbsp;</a></span>verifiqueEntrada()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessadorDeEntradas::verifiqueEntrada </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>listaDeEntrada</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>opcaoDeEntrada</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Não mais usado no código atual. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_entradas_af70849d24dc0a004f5680661ad530f5e_cgraph.png" border="0" usemap="#class_processador_de_entradas_af70849d24dc0a004f5680661ad530f5e_cgraph" alt=""/></div>
+<map name="class_processador_de_entradas_af70849d24dc0a004f5680661ad530f5e_cgraph" id="class_processador_de_entradas_af70849d24dc0a004f5680661ad530f5e_cgraph">
+<area shape="rect" id="node2" href="class_processador_de_entradas.html#a09e9759de7ceaedcb065c1b0123012a6" title="Recebe uma lista de alturas em cifras e as converte em seus equivalentes numéricos. " alt="" coords="217,5,415,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aefe68fd457391f865341a27cf3f100ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe68fd457391f865341a27cf3f100ed">&#9670;&nbsp;</a></span>verifiqueTipoLista() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProcessadorDeEntradas::verifiqueTipoLista </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>listaDeEntrada</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0bd217307463a3cea9a3ba54693a0e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0bd217307463a3cea9a3ba54693a0e4">&#9670;&nbsp;</a></span>verifiqueTipoLista() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProcessadorDeEntradas::verifiqueTipoLista </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>listaDeEntrada</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_processador_de_entradas_8h_source.html">ProcessadorDeEntradas.h</a></li>
-<li>src/ProcessadorDeEntradas.cpp</li>
+<li>C-Syncker/include/<a class="el" href="_processador_de_entradas_8h_source.html">ProcessadorDeEntradas.h</a></li>
+<li>C-Syncker/src/<a class="el" href="_processador_de_entradas_8cpp.html">ProcessadorDeEntradas.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_processador_de_entradas.html">ProcessadorDeEntradas</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

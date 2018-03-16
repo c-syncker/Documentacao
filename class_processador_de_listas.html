@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_processador_de_listas.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -73,9 +97,20 @@ $(function() {
  <a href="class_processador_de_listas.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_processador_de_listas_8h_source.html">ProcessadorDeListas.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ProcessadorDeListas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas__coll__graph.png" border="0" usemap="#_processador_de_listas_coll__map" alt="Collaboration graph"/></div>
+<map name="_processador_de_listas_coll__map" id="_processador_de_listas_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8a6bfe2b6d0397408cf36ec3dccdd264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a8a6bfe2b6d0397408cf36ec3dccdd264">ProcessadorDeListas</a> ()</td></tr>
+<tr class="separator:a8a6bfe2b6d0397408cf36ec3dccdd264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb1a7441736a7076d058f10ddd6c853"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#acfb1a7441736a7076d058f10ddd6c853">~ProcessadorDeListas</a> ()</td></tr>
+<tr class="separator:acfb1a7441736a7076d058f10ddd6c853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaec45c66a37e9976416b4b298e58aff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#aaaec45c66a37e9976416b4b298e58aff">uneListasDeDuracoes</a> (list&lt; int &gt; &amp;inteirosParaSincronizacao, int resultadoMMC, map&lt; int, int &gt; &amp;uniaoDeTabuadasOrdenadasSemRepeticoes)</td></tr>
 <tr class="memdesc:aaaec45c66a37e9976416b4b298e58aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Une listas de durações através de um dicionário.  <a href="#aaaec45c66a37e9976416b4b298e58aff">More...</a><br /></td></tr>
 <tr class="separator:aaaec45c66a37e9976416b4b298e58aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,8 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973e3fa18e8101ad289db6d970f9333c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a973e3fa18e8101ad289db6d970f9333c">desdobreListas</a> (list&lt; int &gt; &amp;listaParaDesdobrar, int numeroDeRepeticoes, list&lt; int &gt; &amp;listaResultante)</td></tr>
 <tr class="memdesc:a973e3fa18e8101ad289db6d970f9333c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desdobra/Repete uma lista.  <a href="#a973e3fa18e8101ad289db6d970f9333c">More...</a><br /></td></tr>
 <tr class="separator:a973e3fa18e8101ad289db6d970f9333c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac550e42d5f4232324beb9e72accdd8fd"><td class="memItemLeft" align="right" valign="top"><a id="ac550e42d5f4232324beb9e72accdd8fd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desdobreListas</b> (list&lt; string &gt; &amp;listaParaDesdobrar, int numeroDeRepeticoes, list&lt; string &gt; &amp;listaResultante)</td></tr>
+<tr class="memitem:ac550e42d5f4232324beb9e72accdd8fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#ac550e42d5f4232324beb9e72accdd8fd">desdobreListas</a> (list&lt; string &gt; &amp;listaParaDesdobrar, int numeroDeRepeticoes, list&lt; string &gt; &amp;listaResultante)</td></tr>
 <tr class="separator:ac550e42d5f4232324beb9e72accdd8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39609c84bee80b081bbfe426c7766c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73">sincronizeListasNumericas</a> (list&lt; int &gt; &amp;lista1, list&lt; int &gt; &amp;lista2, list&lt; int &gt; &amp;listaResultante)</td></tr>
 <tr class="memdesc:a39609c84bee80b081bbfe426c7766c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sincroniza o tamanho de duas listas numéricas.  <a href="#a39609c84bee80b081bbfe426c7766c73">More...</a><br /></td></tr>
@@ -109,20 +143,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>desdobreListas</b> (l
 <tr class="memitem:a0db55a7cbc691d278c0d04aa30467298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a0db55a7cbc691d278c0d04aa30467298">calculeDerivadaDiscreta</a> (map&lt; int, int &gt; &amp;uniaoDeTabuadasOrdenadasSemRepeticoes, list&lt; int &gt; &amp;listaDerivadaDiscreta)</td></tr>
 <tr class="memdesc:a0db55a7cbc691d278c0d04aa30467298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a derivada discreta (vetor intervalar) de uma lista.  <a href="#a0db55a7cbc691d278c0d04aa30467298">More...</a><br /></td></tr>
 <tr class="separator:a0db55a7cbc691d278c0d04aa30467298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fb8260d0e8d319b708bc54f59f41a3e"><td class="memItemLeft" align="right" valign="top"><a id="a2fb8260d0e8d319b708bc54f59f41a3e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>revertaLista</b> (list&lt; int &gt; &amp;listaOrdemNormal, list&lt; int &gt; &amp;listaOrdemInversa)</td></tr>
+<tr class="memitem:a2fb8260d0e8d319b708bc54f59f41a3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a2fb8260d0e8d319b708bc54f59f41a3e">revertaLista</a> (list&lt; int &gt; &amp;listaOrdemNormal, list&lt; int &gt; &amp;listaOrdemInversa)</td></tr>
 <tr class="separator:a2fb8260d0e8d319b708bc54f59f41a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b143ac40f9145a3b2117f1ffc5f4525"><td class="memItemLeft" align="right" valign="top"><a id="a3b143ac40f9145a3b2117f1ffc5f4525"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>revertaLista</b> (list&lt; string &gt; &amp;listaOrdemNormal, list&lt; string &gt; &amp;listaOrdemInversa)</td></tr>
+<tr class="memitem:a3b143ac40f9145a3b2117f1ffc5f4525"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a3b143ac40f9145a3b2117f1ffc5f4525">revertaLista</a> (list&lt; string &gt; &amp;listaOrdemNormal, list&lt; string &gt; &amp;listaOrdemInversa)</td></tr>
 <tr class="separator:a3b143ac40f9145a3b2117f1ffc5f4525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdd9f93e3e2b09e0d8d23c630b501d80"><td class="memItemLeft" align="right" valign="top"><a id="afdd9f93e3e2b09e0d8d23c630b501d80"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>exibaLista</b> (list&lt; string &gt; listaParaExibir)</td></tr>
+<tr class="memitem:afdd9f93e3e2b09e0d8d23c630b501d80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#afdd9f93e3e2b09e0d8d23c630b501d80">exibaLista</a> (list&lt; string &gt; listaParaExibir)</td></tr>
 <tr class="separator:afdd9f93e3e2b09e0d8d23c630b501d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8092d89027d274b578c060cff555473d"><td class="memItemLeft" align="right" valign="top"><a id="a8092d89027d274b578c060cff555473d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>exibaLista</b> (list&lt; int &gt; listaParaExibir)</td></tr>
+<tr class="memitem:a8092d89027d274b578c060cff555473d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a8092d89027d274b578c060cff555473d">exibaLista</a> (list&lt; int &gt; listaParaExibir)</td></tr>
 <tr class="separator:a8092d89027d274b578c060cff555473d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc7452bd3ee8819e996fb83c59173bf2"><td class="memItemLeft" align="right" valign="top"><a id="abc7452bd3ee8819e996fb83c59173bf2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoes</b> (int MMClistasEnvolvidas, int somatorioElementosLista)</td></tr>
+<tr class="memitem:abc7452bd3ee8819e996fb83c59173bf2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#abc7452bd3ee8819e996fb83c59173bf2">coeficienteDeRepeticoes</a> (int MMClistasEnvolvidas, int somatorioElementosLista)</td></tr>
 <tr class="separator:abc7452bd3ee8819e996fb83c59173bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a868215a0623d68b702f804615674f07d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processador_de_listas.html#a868215a0623d68b702f804615674f07d">mmc</a> (int num1, int num2)</td></tr>
 <tr class="memdesc:a868215a0623d68b702f804615674f07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o Mínimo Múltiplo Comum (MMC).  <a href="#a868215a0623d68b702f804615674f07d">More...</a><br /></td></tr>
@@ -134,7 +163,50 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe responsável pelas operações sobre listas. </p>
 <p>Essa classe realiza diversas operações sobre listas numéricas e/ou alfanuméricas informadas pelo usuário. Essas operações são usadas no processo de composição. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8a6bfe2b6d0397408cf36ec3dccdd264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a6bfe2b6d0397408cf36ec3dccdd264">&#9670;&nbsp;</a></span>ProcessadorDeListas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProcessadorDeListas::ProcessadorDeListas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfb1a7441736a7076d058f10ddd6c853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb1a7441736a7076d058f10ddd6c853">&#9670;&nbsp;</a></span>~ProcessadorDeListas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProcessadorDeListas::~ProcessadorDeListas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9c839959d797222e3d7f3fb7beb88896"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c839959d797222e3d7f3fb7beb88896">&#9670;&nbsp;</a></span>acumuleValoresDaLista()</h2>
 
@@ -170,6 +242,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a9c839959d797222e3d7f3fb7beb88896_icgraph.png" border="0" usemap="#class_processador_de_listas_a9c839959d797222e3d7f3fb7beb88896_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a9c839959d797222e3d7f3fb7beb88896_icgraph" id="class_processador_de_listas_a9c839959d797222e3d7f3fb7beb88896_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="456,13,507,39"/>
+<area shape="rect" id="node3" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="221,35,408,76"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -215,6 +296,23 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_cgraph.png" border="0" usemap="#class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_cgraph" alt=""/></div>
+<map name="class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_cgraph" id="class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_cgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a868215a0623d68b702f804615674f07d" title="Calcula o Mínimo Múltiplo Comum (MMC). " alt="" coords="232,5,416,32"/>
+<area shape="rect" id="node3" href="class_processador_de_listas.html#a973e3fa18e8101ad289db6d970f9333c" title="Desdobra/Repete uma lista. " alt="" coords="251,57,397,98"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_icgraph.png" border="0" usemap="#class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_icgraph" id="class_processador_de_listas_a55820e47d04ab38190bdaf968a466398_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="232,13,283,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -253,6 +351,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a5f32d34c750af53d0e0db52f7cf1c147_icgraph.png" border="0" usemap="#class_processador_de_listas_a5f32d34c750af53d0e0db52f7cf1c147_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a5f32d34c750af53d0e0db52f7cf1c147_icgraph" id="class_processador_de_listas_a5f32d34c750af53d0e0db52f7cf1c147_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="460,13,511,39"/>
+<area shape="rect" id="node3" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="225,35,412,76"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -330,11 +437,56 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a8649d6fdaee088023094b93a74c602ac_cgraph.png" border="0" usemap="#class_processador_de_listas_a8649d6fdaee088023094b93a74c602ac_cgraph" alt=""/></div>
+<map name="class_processador_de_listas_a8649d6fdaee088023094b93a74c602ac_cgraph" id="class_processador_de_listas_a8649d6fdaee088023094b93a74c602ac_cgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a868215a0623d68b702f804615674f07d" title="Calcula o Mínimo Múltiplo Comum (MMC). " alt="" coords="200,13,384,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abc7452bd3ee8819e996fb83c59173bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7452bd3ee8819e996fb83c59173bf2">&#9670;&nbsp;</a></span>coeficienteDeRepeticoes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProcessadorDeListas::coeficienteDeRepeticoes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MMClistasEnvolvidas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>somatorioElementosLista</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_abc7452bd3ee8819e996fb83c59173bf2_icgraph.png" border="0" usemap="#class_processador_de_listas_abc7452bd3ee8819e996fb83c59173bf2_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_abc7452bd3ee8819e996fb83c59173bf2_icgraph" id="class_processador_de_listas_abc7452bd3ee8819e996fb83c59173bf2_icgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="229,5,416,47"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="464,13,515,39"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a973e3fa18e8101ad289db6d970f9333c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973e3fa18e8101ad289db6d970f9333c">&#9670;&nbsp;</a></span>desdobreListas()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a973e3fa18e8101ad289db6d970f9333c">&#9670;&nbsp;</a></span>desdobreListas() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,6 +527,86 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a973e3fa18e8101ad289db6d970f9333c_icgraph.png" border="0" usemap="#class_processador_de_listas_a973e3fa18e8101ad289db6d970f9333c_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a973e3fa18e8101ad289db6d970f9333c_icgraph" id="class_processador_de_listas_a973e3fa18e8101ad289db6d970f9333c_icgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a55820e47d04ab38190bdaf968a466398" title="Faz associação um a um entre alturas e durações. " alt="" coords="204,5,383,47"/>
+<area shape="rect" id="node4" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="200,71,387,112"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="435,46,485,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac550e42d5f4232324beb9e72accdd8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac550e42d5f4232324beb9e72accdd8fd">&#9670;&nbsp;</a></span>desdobreListas() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessadorDeListas::desdobreListas </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaParaDesdobrar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numeroDeRepeticoes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaResultante</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdd9f93e3e2b09e0d8d23c630b501d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd9f93e3e2b09e0d8d23c630b501d80">&#9670;&nbsp;</a></span>exibaLista() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessadorDeListas::exibaLista </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>listaParaExibir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8092d89027d274b578c060cff555473d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8092d89027d274b578c060cff555473d">&#9670;&nbsp;</a></span>exibaLista() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessadorDeListas::exibaLista </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>listaParaExibir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -420,6 +652,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_af1505b17c1556665a2ecb5247188d4c4_icgraph.png" border="0" usemap="#class_processador_de_listas_af1505b17c1556665a2ecb5247188d4c4_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_af1505b17c1556665a2ecb5247188d4c4_icgraph" id="class_processador_de_listas_af1505b17c1556665a2ecb5247188d4c4_icgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="200,5,387,47"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="435,13,485,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -459,6 +700,17 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a868215a0623d68b702f804615674f07d_icgraph.png" border="0" usemap="#class_processador_de_listas_a868215a0623d68b702f804615674f07d_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a868215a0623d68b702f804615674f07d_icgraph" id="class_processador_de_listas_a868215a0623d68b702f804615674f07d_icgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a8649d6fdaee088023094b93a74c602ac" title="Calcula o Mínimo Múltiplo Comum (MMC) com mais de dois elementos. " alt="" coords="257,5,404,47"/>
+<area shape="rect" id="node3" href="class_processador_de_listas.html#a55820e47d04ab38190bdaf968a466398" title="Faz associação um a um entre alturas e durações. " alt="" coords="241,71,420,112"/>
+<area shape="rect" id="node5" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="237,136,424,177"/>
+<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="472,111,523,138"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -486,6 +738,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a0c2160bdd962834db2929a6f8a9acd7a_icgraph.png" border="0" usemap="#class_processador_de_listas_a0c2160bdd962834db2929a6f8a9acd7a_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a0c2160bdd962834db2929a6f8a9acd7a_icgraph" id="class_processador_de_listas_a0c2160bdd962834db2929a6f8a9acd7a_icgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="200,5,387,47"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="435,13,485,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -523,6 +784,79 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_ae9e4af0b3ba22ece83efef5924173a1c_icgraph.png" border="0" usemap="#class_processador_de_listas_ae9e4af0b3ba22ece83efef5924173a1c_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_ae9e4af0b3ba22ece83efef5924173a1c_icgraph" id="class_processador_de_listas_ae9e4af0b3ba22ece83efef5924173a1c_icgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a39609c84bee80b081bbfe426c7766c73" title="Sincroniza o tamanho de duas listas numéricas. " alt="" coords="200,5,387,47"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="435,13,485,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2fb8260d0e8d319b708bc54f59f41a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb8260d0e8d319b708bc54f59f41a3e">&#9670;&nbsp;</a></span>revertaLista() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessadorDeListas::revertaLista </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaOrdemNormal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaOrdemInversa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a2fb8260d0e8d319b708bc54f59f41a3e_icgraph.png" border="0" usemap="#class_processador_de_listas_a2fb8260d0e8d319b708bc54f59f41a3e_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a2fb8260d0e8d319b708bc54f59f41a3e_icgraph" id="class_processador_de_listas_a2fb8260d0e8d319b708bc54f59f41a3e_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="200,13,251,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b143ac40f9145a3b2117f1ffc5f4525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b143ac40f9145a3b2117f1ffc5f4525">&#9670;&nbsp;</a></span>revertaLista() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessadorDeListas::revertaLista </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaOrdemNormal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaOrdemInversa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -567,6 +901,29 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_cgraph.png" border="0" usemap="#class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_cgraph" alt=""/></div>
+<map name="class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_cgraph" id="class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_cgraph">
+<area shape="rect" id="node2" href="class_processador_de_listas.html#a868215a0623d68b702f804615674f07d" title="Calcula o Mínimo Múltiplo Comum (MMC). " alt="" coords="240,5,424,32"/>
+<area shape="rect" id="node3" href="class_processador_de_listas.html#abc7452bd3ee8819e996fb83c59173bf2" title="ProcessadorDeListas\l::coeficienteDeRepeticoes" alt="" coords="244,57,420,98"/>
+<area shape="rect" id="node4" href="class_processador_de_listas.html#a973e3fa18e8101ad289db6d970f9333c" title="Desdobra/Repete uma lista. " alt="" coords="259,122,405,163"/>
+<area shape="rect" id="node5" href="class_processador_de_listas.html#a9c839959d797222e3d7f3fb7beb88896" title="Acumula (soma) os valores de uma lista. " alt="" coords="248,187,416,229"/>
+<area shape="rect" id="node6" href="class_processador_de_listas.html#af1505b17c1556665a2ecb5247188d4c4" title="Dadas duas listas, realiza uma junção entre elas (semelhante ao append()). " alt="" coords="259,253,405,294"/>
+<area shape="rect" id="node7" href="class_processador_de_listas.html#ae9e4af0b3ba22ece83efef5924173a1c" title="Dada uma lista contendo repetições de elementos, faz uma remoção desses valores. " alt="" coords="259,318,405,359"/>
+<area shape="rect" id="node8" href="class_processador_de_listas.html#a0c2160bdd962834db2929a6f8a9acd7a" title="Ordena listas. " alt="" coords="259,383,405,425"/>
+<area shape="rect" id="node9" href="class_processador_de_listas.html#a5f32d34c750af53d0e0db52f7cf1c147" title="Calcula a derivada discreta (vetor intervalar) de uma lista. " alt="" coords="246,449,418,490"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_icgraph.png" border="0" usemap="#class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_icgraph" alt=""/></div>
+<map name="class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_icgraph" id="class_processador_de_listas_a39609c84bee80b081bbfe426c7766c73_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="240,13,291,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -616,15 +973,19 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>coeficienteDeRepeticoe
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_processador_de_listas_8h_source.html">ProcessadorDeListas.h</a></li>
-<li>src/ProcessadorDeListas.cpp</li>
+<li>C-Syncker/include/<a class="el" href="_processador_de_listas_8h_source.html">ProcessadorDeListas.h</a></li>
+<li>C-Syncker/src/<a class="el" href="_processador_de_listas_8cpp.html">ProcessadorDeListas.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_processador_de_listas.html">ProcessadorDeListas</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_escriba.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -73,6 +97,13 @@ $(function() {
  <a href="class_escriba.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_escriba_8h_source.html">Escriba.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Escriba:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_escriba__coll__graph.png" border="0" usemap="#_escriba_coll__map" alt="Collaboration graph"/></div>
+<map name="_escriba_coll__map" id="_escriba_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -82,6 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a83a6a12bc056d0cc5ec9e25a03d0187f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_escriba.html#a83a6a12bc056d0cc5ec9e25a03d0187f">Escriba</a> (string nomeDoArquivo)</td></tr>
 <tr class="memdesc:a83a6a12bc056d0cc5ec9e25a03d0187f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor sobrecarregado da classe <a class="el" href="class_escriba.html" title="Classe responsável pelos arquivo de saída. ">Escriba</a>.  <a href="#a83a6a12bc056d0cc5ec9e25a03d0187f">More...</a><br /></td></tr>
 <tr class="separator:a83a6a12bc056d0cc5ec9e25a03d0187f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27ea56c3da17726a6ffe9633b6c0fee"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_escriba.html#ab27ea56c3da17726a6ffe9633b6c0fee">~Escriba</a> ()</td></tr>
+<tr class="separator:ab27ea56c3da17726a6ffe9633b6c0fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbcfa8cc9829b93cc2ba927cd4282e38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_escriba.html#acbcfa8cc9829b93cc2ba927cd4282e38">separeAlturasDeDuracoes</a> (string entrada, list&lt; string &gt; &amp;alturasExtraidasDaMelodia, list&lt; string &gt; &amp;listaDeDuracoes)</td></tr>
 <tr class="memdesc:acbcfa8cc9829b93cc2ba927cd4282e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Separa alturas e durações.  <a href="#acbcfa8cc9829b93cc2ba927cd4282e38">More...</a><br /></td></tr>
 <tr class="separator:acbcfa8cc9829b93cc2ba927cd4282e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,12 +127,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b90bd48a8607486a4471d7f287cdc91"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_escriba.html#a8b90bd48a8607486a4471d7f287cdc91">substituiAlturaCoringaDoDicionarioDeDuracoesString</a> (list&lt; string &gt; &amp;listaDeAlturas, list&lt; string &gt; &amp;listaDeDuracoes)</td></tr>
 <tr class="memdesc:a8b90bd48a8607486a4471d7f287cdc91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitui uma altura e duração no dicionário de durações.  <a href="#a8b90bd48a8607486a4471d7f287cdc91">More...</a><br /></td></tr>
 <tr class="separator:a8b90bd48a8607486a4471d7f287cdc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d3b881de29eee0831f9997ceaca0cdd"><td class="memItemLeft" align="right" valign="top"><a id="a9d3b881de29eee0831f9997ceaca0cdd"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>substituiAlturaCoringaDoDicionarioDeDuracoes</b> (list&lt; string &gt; &amp;listaDeAlturas, list&lt; int &gt; &amp;listaDeDuracoes)</td></tr>
+<tr class="memitem:a9d3b881de29eee0831f9997ceaca0cdd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_escriba.html#a9d3b881de29eee0831f9997ceaca0cdd">substituiAlturaCoringaDoDicionarioDeDuracoes</a> (list&lt; string &gt; &amp;listaDeAlturas, list&lt; int &gt; &amp;listaDeDuracoes)</td></tr>
+<tr class="memdesc:a9d3b881de29eee0831f9997ceaca0cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Semelhant a <a class="el" href="class_escriba.html#a8b90bd48a8607486a4471d7f287cdc91" title="Substitui uma altura e duração no dicionário de durações. ">substituiAlturaCoringaDoDicionarioDeDuracoesString()</a> usando uma lista de durações numéricas.  <a href="#a9d3b881de29eee0831f9997ceaca0cdd">More...</a><br /></td></tr>
 <tr class="separator:a9d3b881de29eee0831f9997ceaca0cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4dc3bf85963883c6b67eb6392f594ca"><td class="memItemLeft" align="right" valign="top"><a id="af4dc3bf85963883c6b67eb6392f594ca"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_escriba.html#af4dc3bf85963883c6b67eb6392f594ca">pegueONomeDoArquivo</a> ()</td></tr>
-<tr class="memdesc:af4dc3bf85963883c6b67eb6392f594ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome do arquivo .ly. <br /></td></tr>
+<tr class="memitem:af4dc3bf85963883c6b67eb6392f594ca"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_escriba.html#af4dc3bf85963883c6b67eb6392f594ca">pegueONomeDoArquivo</a> ()</td></tr>
+<tr class="memdesc:af4dc3bf85963883c6b67eb6392f594ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome do arquivo .ly.  <a href="#af4dc3bf85963883c6b67eb6392f594ca">More...</a><br /></td></tr>
 <tr class="separator:af4dc3bf85963883c6b67eb6392f594ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -147,6 +179,31 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 </div>
 </div>
+<a id="ab27ea56c3da17726a6ffe9633b6c0fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27ea56c3da17726a6ffe9633b6c0fee">&#9670;&nbsp;</a></span>~Escriba()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Escriba::~Escriba </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="adaadbde20bec61782a7414f36e96aec0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adaadbde20bec61782a7414f36e96aec0">&#9670;&nbsp;</a></span>gereArquivoLilypond()</h2>
@@ -183,6 +240,14 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_escriba_adaadbde20bec61782a7414f36e96aec0_icgraph.png" border="0" usemap="#class_escriba_adaadbde20bec61782a7414f36e96aec0_icgraph" alt=""/></div>
+<map name="class_escriba_adaadbde20bec61782a7414f36e96aec0_icgraph" id="class_escriba_adaadbde20bec61782a7414f36e96aec0_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="244,5,295,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -210,6 +275,33 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_escriba_a6ef6d0ef9305791f077a004ae985bf2b_icgraph.png" border="0" usemap="#class_escriba_a6ef6d0ef9305791f077a004ae985bf2b_icgraph" alt=""/></div>
+<map name="class_escriba_a6ef6d0ef9305791f077a004ae985bf2b_icgraph" id="class_escriba_a6ef6d0ef9305791f077a004ae985bf2b_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="205,5,256,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af4dc3bf85963883c6b67eb6392f594ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4dc3bf85963883c6b67eb6392f594ca">&#9670;&nbsp;</a></span>pegueONomeDoArquivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Escriba::pegueONomeDoArquivo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o nome do arquivo .ly. </p>
 
 </div>
 </div>
@@ -255,6 +347,51 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_escriba_acbcfa8cc9829b93cc2ba927cd4282e38_icgraph.png" border="0" usemap="#class_escriba_acbcfa8cc9829b93cc2ba927cd4282e38_icgraph" alt=""/></div>
+<map name="class_escriba_acbcfa8cc9829b93cc2ba927cd4282e38_icgraph" id="class_escriba_acbcfa8cc9829b93cc2ba927cd4282e38_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="224,13,275,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d3b881de29eee0831f9997ceaca0cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3b881de29eee0831f9997ceaca0cdd">&#9670;&nbsp;</a></span>substituiAlturaCoringaDoDicionarioDeDuracoes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Escriba::substituiAlturaCoringaDoDicionarioDeDuracoes </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaDeAlturas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>listaDeDuracoes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Semelhant a <a class="el" href="class_escriba.html#a8b90bd48a8607486a4471d7f287cdc91" title="Substitui uma altura e duração no dicionário de durações. ">substituiAlturaCoringaDoDicionarioDeDuracoesString()</a> usando uma lista de durações numéricas. </p>
+<p>Faz a substituição de caracteres no dicionário interno da classe, usando uma lista de durações no formato de inteiros.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nomeDoArquivo</td><td>nome do arquivo gerado na saída </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -288,26 +425,37 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <p>Recebe como entrada um dicionario contedo as alturas e durações, uma lista com alturas e uma lista com durações. Usa cada elemento da lista de durações como índice do dicionário para buscar um shape (forma?) que processe a altura dada corretamente (dicionário = a16 entrada =&gt; altura = c duração 1) se transforma em: dicionario[1] = a16 -&gt; a = c &ndash;&gt; c16 essa é a string final enviada para o lilypond</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dicionarioDuracoes</td><td>dicionário com os símbolos reconhecidos pelo Lilypond </td></tr>
     <tr><td class="paramname">listaAlturas</td><td>alturas que irão ser escritas no arquivo Lilypond </td></tr>
     <tr><td class="paramname">listaDuracoes</td><td>durações usadas como índices do dicionário para achar a altura correspondente </td></tr>
     <tr><td class="paramname">saida</td><td>string contendo as notas que serão escritas no arquivo a ser compilado pelo Lilypond </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_escriba_a8b90bd48a8607486a4471d7f287cdc91_icgraph.png" border="0" usemap="#class_escriba_a8b90bd48a8607486a4471d7f287cdc91_icgraph" alt=""/></div>
+<map name="class_escriba_a8b90bd48a8607486a4471d7f287cdc91_icgraph" id="class_escriba_a8b90bd48a8607486a4471d7f287cdc91_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="268,20,319,47"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_escriba_8h_source.html">Escriba.h</a></li>
-<li>src/Escriba.cpp</li>
+<li>C-Syncker/include/<a class="el" href="_escriba_8h_source.html">Escriba.h</a></li>
+<li>C-Syncker/src/<a class="el" href="_escriba_8cpp.html">Escriba.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_escriba.html">Escriba</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>
